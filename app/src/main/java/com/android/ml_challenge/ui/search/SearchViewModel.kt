@@ -34,4 +34,8 @@ class SearchViewModel(private val searchUseCase: SearchUseCase) : ViewModel() {
                 }
         }
     }
+
+    fun onPause() {
+        _uiSearchState.value = UiSearchState.Loading
+    }
 }

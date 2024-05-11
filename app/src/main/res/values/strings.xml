@@ -3,4 +3,11 @@
     <string name="type_here">Digite aqui..</string>
     <string name="search">Buscar</string>
     <string name="type_valid_product">Digite um produto válido.</string>
+    <string name="none_product_founded">Nenhum produto foi encontrado.</string>
+    <string name="availability_quantity">"Quantidade disponível: "</string>
+    <string name="oops">Oops!</string>
+    <string name="none_item_founded">Nenhum produto foi encontrado.. \n mas que tal fazer uma nova busca?!</string>
+    <string name="generic_error_text">Parece que algo não funcionou como o esperado! Que tal checar sua conexão com a internet?</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="look_another_product">Buscar outro produto</string>
 </resources>

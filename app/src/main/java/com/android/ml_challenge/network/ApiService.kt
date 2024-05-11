@@ -8,7 +8,7 @@ interface ApiService {
 
     @GET("MLB/search")
     suspend fun searchItems(
-        @Query("q") value: String,
+        @Query("q") name: String,
         @Query("offset") offset: String
-    ): List<SearchResponse>
+    ): SearchResponse
 }

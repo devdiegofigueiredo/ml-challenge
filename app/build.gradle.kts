@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.retrofit)
     implementation(libs.androidx.converter.gson)
     implementation(libs.koin.android)
+    implementation(libs.picasso)
+    implementation(libs.fragment)
     testImplementation(libs.junit)
     testImplementation(libs.mockito)
     testImplementation(libs.mockk)

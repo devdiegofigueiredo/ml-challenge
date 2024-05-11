@@ -1,6 +1,9 @@
 package com.android.ml_challenge
 
 import android.app.Application
+import com.android.ml_challenge.network.RetrofitBuilder.retrofitModule
+import com.android.ml_challenge.network.di.networkModule
+import com.android.ml_challenge.ui.products.di.productsModule
 import com.android.ml_challenge.ui.search.di.searchModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -14,7 +17,7 @@ class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
-            modules(searchModule)
+            modules(searchModule, networkModule, retrofitModule)
         }
     }
 }
