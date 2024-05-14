@@ -1,6 +1,7 @@
 package com.android.ml_challenge.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Product(
     @SerializedName("id") val id: String,
@@ -12,14 +13,14 @@ data class Product(
     @SerializedName("available_quantity") val availableQuantity: String,
     @SerializedName("seller") val seller: Seller,
     @SerializedName("attributes") val attributes: List<Attributes>
-) {
+) : Serializable {
     data class Seller(
         @SerializedName("id") val id: String,
         @SerializedName("nickname") val nickname: String
-    )
+    ) : Serializable
 
     data class Attributes(
-        @SerializedName("id") val id: String,
+        @SerializedName("value_name") val valueName: String,
         @SerializedName("name") val name: String
-    )
+    ) : Serializable
 }

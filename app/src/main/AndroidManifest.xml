@@ -29,5 +29,9 @@
         <activity
             android:name=".ui.products.ProductsActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".ui.details.ProductDetailActivity"
+            android:exported="true" />
     </application>
 </manifest>

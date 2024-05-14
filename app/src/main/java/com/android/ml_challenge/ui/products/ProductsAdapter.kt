@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.ml_challenge.R
 import com.android.ml_challenge.databinding.ProductItemViewBinding
 import com.android.ml_challenge.model.Product
+import com.android.ml_challenge.ui.util.formatMoney
 import com.squareup.picasso.Picasso
 import kotlin.reflect.KFunction1
 
@@ -51,7 +52,7 @@ class ProductsAdapter(
         fun bind(product: Product) {
             view.run {
                 productTitle.text = product.title
-                productPrice.text = setupProductPrice(product.price)
+                productPrice.text = product.price.formatMoney()
                 productAvailabilityQuantity.text =
                     setupAvailabilityQuantity(product.availableQuantity, view.root.context)
                 loadImage(view.productImage, product.thumbnail)
@@ -66,10 +67,6 @@ class ProductsAdapter(
 
         private fun setupAvailabilityQuantity(availableQuantity: String, context: Context): String {
             return context.getString(R.string.availability_quantity) + availableQuantity
-        }
-
-        private fun setupProductPrice(price: Double): String {
-            return "R$ " + String.format("%.2f", price)
         }
     }
 }

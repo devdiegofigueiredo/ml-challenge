@@ -1,5 +1,6 @@
 package com.android.ml_challenge.ui.products
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.ml_challenge.R
 import com.android.ml_challenge.databinding.ActivityProductsBinding
 import com.android.ml_challenge.model.Product
+import com.android.ml_challenge.ui.details.ProductDetailActivity
 import com.android.ml_challenge.ui.products.di.productsModule
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -132,6 +134,10 @@ class ProductsActivity : AppCompatActivity() {
     }
 
     private fun onItemViewClickListener(product: Product) {
+        Intent(baseContext, ProductDetailActivity::class.java).run {
+            putExtra("product", product)
+            startActivity(this)
+        }
     }
 
     private fun setLoadingVisibility(shouldShow: Boolean) {
